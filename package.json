@@ -1,8 +1,8 @@
 {
-  "name": "jsonresume-theme-macchiato",
-  "version": "1.1.0",
+  "name": "jsonresume-theme-macchiato-plus",
+  "version": "1.0.0",
   "description": "Simple theme for JSON Resume. Based on caffeine-theme.",
-  "author": "Alessandro Biondi",
+  "author": "Brandon Ly",
   "scripts": {
     "test": "jest",
     "prepublishOnly": "npm run pretty && npm run lint && npm run test",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/biosan/jsonresume-theme-macchiato"
+    "url": "https://github.com/brandonkylely/jsonresume-theme-macchiato-plus"
   },
   "license": "MIT",
   "dependencies": {
