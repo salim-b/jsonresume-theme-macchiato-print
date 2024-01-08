@@ -1,11 +1,10 @@
 {
   "name": "jsonresume-theme-macchiato-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple theme for JSON Resume. Based on caffeine-theme.",
   "author": "Brandon Ly",
   "scripts": {
     "test": "jest",
-    "prepublishOnly": "npm run pretty && npm run lint && npm run test",
     "pretty": "prettier --write --ignore-path='*lock.json' '{src/**/*.{js,ts,json},./*{js,ts,json}}' ",
     "lint": "eslint *.js"
   },
