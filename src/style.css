@@ -4,10 +4,31 @@
 /*----- Dimensions and sizes -----*/
 /* Base */
 @font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Red Hat Display Light'), local('RedHatDisplay-Light'), url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbjKWckg.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Red Hat Display Medium'), local('RedHatDisplay-Medium'), url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbl6Wckg.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 300;
   src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Josefin Sans Medium'), local('JosefinSans-Medium'), url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_ArQXME.ttf) format('truetype');
 }
 
 @font-face {
@@ -83,14 +104,14 @@ h6 {
 }
 
 h1 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Red Hat Display", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 40px;
   letter-spacing: 1px;
 }
 
 h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-family: "Red Hat Display", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: .5px;
@@ -304,12 +325,27 @@ ul.two-column li {
     padding: 0 22px 0 34px;
   }
 
-  .container {
-    page-break-inside: avoid;
+  /* Apply top margin to all sections. This helps ensure some space on page breaks
+     and neatly break the page between sections */
+  section {
+    padding-top: 30px;
+    break-inside: avoid;
   }
 
-  .work-container .item {
-    page-break-inside: avoid;
+  /* Remove top margin if section follows the title */
+  .title + section {
+      padding-top: 0px;
+  }
+
+  /* When rendering for print, apply all the margin to the top of the 
+     section to give extra space on page breaks */
+  .item {
+    margin-bottom: 0px;
+  }
+
+  /* Make sure the page doesn't break immediately following a title */
+  .title {
+    break-after: avoid;
   }
 
   .fa-external-link {
