@@ -328,7 +328,7 @@ ul.two-column li {
   /* Apply top margin to all sections. This helps ensure some space on page breaks
      and neatly break the page between sections */
   section {
-    padding-top: 30px;
+    padding-top: 10px;
     break-inside: avoid;
   }
 
@@ -337,7 +337,7 @@ ul.two-column li {
       padding-top: 0px;
   }
 
-  /* When rendering for print, apply all the margin to the top of the 
+  /* When rendering for print, apply all the margin to the top of the
      section to give extra space on page breaks */
   .item {
     margin-bottom: 0px;
