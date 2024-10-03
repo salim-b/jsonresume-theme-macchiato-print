@@ -173,6 +173,11 @@ h6 {
   font-size: 10px;
 }
 
+.section-header h3 {
+  font-family: Oswald;
+  font-weight: normal;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
