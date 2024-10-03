@@ -409,10 +409,20 @@ ul.two-column li {
     padding: 0 22px 0 34px;
   }
 
+  /* Make sure the page doesn't break immediately following a title */
+  .title {
+    break-after: avoid;
+  }
+
   /* Apply top margin to all sections. This helps ensure some space on page breaks
      and neatly break the page between sections */
   section {
     padding-top: 10px;
+    break-inside: avoid;
+  }
+
+  /* Avoid page breaks inside left-margin containers */
+  .left-column .container {
     break-inside: avoid;
   }
 
@@ -425,11 +435,6 @@ ul.two-column li {
      section to give extra space on page breaks */
   .item {
     margin-bottom: 0px;
-  }
-
-  /* Make sure the page doesn't break immediately following a title */
-  .title {
-    break-after: avoid;
   }
 
   .fa-external-link {
