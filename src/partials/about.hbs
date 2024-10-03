@@ -1,6 +1,6 @@
 {{#resume.basics}}
 <div class="container about-container">
-    {{> title value="About"}}
+    {{> title value="Adressen"}}
 
     {{#if location}}
         {{#location}}
@@ -9,7 +9,7 @@
     {{/if}}
 
     {{#if birthday}}
-        {{> info-tag text=(concat "Born in " this.birthday) icon="fa-calendar"}}
+        {{> info-tag text=(concat "Geboren am " this.birthday) icon="fa-calendar"}}
     {{/if}}
 
     {{#if email}}
