@@ -148,6 +148,11 @@ h5.italic {
   font-style: italic;
 }
 
+/* ugly hack to align item timespans with titles */
+h5.pull-right {
+  margin-top: 6px;
+}
+
 h6 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
