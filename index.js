@@ -10,6 +10,7 @@ handlebars.registerHelper({
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
   formatDate: date => moment(date).format('MM/YYYY'),
+  kebabcase: s => s.toLowerCase().replaceAll(/\s+/g, '-'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
 });

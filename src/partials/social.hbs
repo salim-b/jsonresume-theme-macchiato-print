@@ -5,7 +5,7 @@
         {{else if (eq (lowercase network) "portfolio")}}
             {{> info-tag text=this.username icon="fa-briefcase" }}
         {{else}}
-             {{> info-tag text=this.username icon=(concat "fa-" (lowercase network)) }}
+             {{> info-tag text=this.username icon=(concat "fa-" (kebabcase network)) }}
         {{/if}}
     {{/if}}
 {{/if}}
