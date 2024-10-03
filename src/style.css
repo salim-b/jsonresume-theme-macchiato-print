@@ -412,7 +412,7 @@ ul.two-column li {
   /* Apply top margin to all sections. This helps ensure some space on page breaks
      and neatly break the page between sections */
   section {
-    padding-top: 30px;
+    padding-top: 10px;
     break-inside: avoid;
   }
 
