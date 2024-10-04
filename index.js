@@ -9,7 +9,18 @@ handlebars.registerHelper({
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
-  formatDate: date => moment(date).format('MM/YYYY'),
+  formatDate: date => {
+    const parsedDate = moment(date, ['YYYY', 'YYYY-MM', 'YYYY-MM-DD'], true); // Parse the date using multiple formats
+    if (parsedDate.isValid()) {
+      if (date.length === 4) {
+        return parsedDate.format('YYYY'); // Year only
+      } else {
+        return parsedDate.format('MM/YYYY'); // Month/Year
+      }
+    } else {
+      return 'Invalid date'; // Handle invalid date input
+    }
+  },
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
 });
