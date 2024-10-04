@@ -10,15 +10,15 @@ handlebars.registerHelper({
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
   formatDate: date => {
-    const parsedDate = moment(date, ['YYYY', 'YYYY-MM', 'YYYY-MM-DD'], true); // Parse the date using multiple formats
+    const parsedDate = moment(date, ['YYYY', 'YYYY-MM', 'YYYY-MM-DD'], true);
     if (parsedDate.isValid()) {
       if (date.length === 4) {
-        return parsedDate.format('YYYY'); // Year only
+        return parsedDate.format('YYYY');
       } else {
-        return parsedDate.format('MM/YYYY'); // Month/Year
+        return parsedDate.format('MM/YYYY');
       }
     } else {
-      return 'Invalid date'; // Handle invalid date input
+      return 'Invalid date';
     }
   },
   lowercase: s => s.toLowerCase(),
