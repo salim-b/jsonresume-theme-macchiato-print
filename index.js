@@ -2,10 +2,12 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 const handlebarsWax = require('handlebars-wax');
 const moment = require('moment');
+const remark = require('remark');
+const remarkHtml = require('remark-html');
 
 handlebars.registerHelper({
-  removeProtocol: url => url.replace(/.*?:\/\//g, ''),
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
+  eq: (a, b) => a === b,
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
@@ -23,7 +25,8 @@ handlebars.registerHelper({
   },
   kebabcase: s => s.toLowerCase().replaceAll(/\s+/g, '-'),
   lowercase: s => s.toLowerCase(),
-  eq: (a, b) => a === b,
+  markdownToHtml: s => remark().use(remarkHtml).processSync(s).toString(),
+  removeProtocol: url => url.replace(/.*?:\/\//g, '')
 });
 
 function render(resume) {
