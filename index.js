@@ -2,8 +2,8 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 const handlebarsWax = require('handlebars-wax');
 const moment = require('moment');
-const remark = require('remark');
-const remarkHtml = require('remark-html');
+const MarkdownIt = require('markdown-it');
+const md = new MarkdownIt();
 
 handlebars.registerHelper({
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
@@ -13,7 +13,7 @@ handlebars.registerHelper({
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
   formatDate: date => moment(date).format('MM/YYYY'),
   lowercase: s => s.toLowerCase(),
-  markdownToHtml: s => remark().use(remarkHtml).processSync(s).toString(),
+  markdownToHtml: s => md.renderInline(s),
   removeProtocol: url => url.replace(/.*?:\/\//g, '')
 });
 
