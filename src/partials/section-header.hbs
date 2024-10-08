@@ -10,7 +10,7 @@
                 {{!-- <i class="fa fa-external-link" aria-hidden="true"></i> --}}
             </a>
         {{else}}
-            {{name}}
+            {{{markdownToHtml name}}}
         {{/if}}
     </h3>
     {{/if}}
@@ -31,6 +31,6 @@
 </div>
 {{#if description}}
   <h4>
-    {{description}}
+    {{{markdownToHtml description}}}
   </h4>
 {{/if}}

@@ -7,12 +7,12 @@
             {{#if reference}}
             <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
             <blockquote>
-                {{reference}}
+                {{{markdownToHtml reference}}}
             </blockquote>
             {{/if}}
 
             {{#if name}}
-            <h5 class="pull-right"> — {{name}}</h5>
+            <h5 class="pull-right"> — {{{markdownToHtml name}}}</h5>
             {{/if}}
         </section>
     {{/each}}

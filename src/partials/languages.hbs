@@ -5,7 +5,7 @@
         <ul class="minimal">
             {{#each resume.languages}}
                 <li>
-                    <h6>{{language}} {{#if fluency}}<em>({{fluency}})</em>{{/if}}</h6>
+                    <h6>{{{markdownToHtml language}}} {{#if fluency}}<em>({{{markdownToHtml fluency}}})</em>{{/if}}</h6>
                 </li>
             {{/each}}
         </ul>
