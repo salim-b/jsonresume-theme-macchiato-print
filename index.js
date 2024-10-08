@@ -26,7 +26,8 @@ handlebars.registerHelper({
   kebabcase: s => s.toLowerCase().replaceAll(/\s+/g, '-'),
   lowercase: s => s.toLowerCase(),
   markdownToHtml: s => md.renderInline(s),
-  removeProtocol: url => url.replace(/.*?:\/\//g, '')
+  removeProtocol: url => url.replace(/.*?:\/\//g, ''),
+  removeWhitespace: s => s.replace(/\s+/g, '')
 });
 
 function render(resume) {
