@@ -6,17 +6,17 @@
     <section class="item">
         {{> section-header name=this.organization showWebsite=true}}
         {{#if position}}
-        <h5>{{position}}</h5>
+        <h5>{{{markdownToHtml position}}}</h5>
         {{/if}}
 
         {{#if summary}}
-        <p class="summary">{{summary}}</p>
+        <p class="summary">{{{markdownToHtml summary}}}</p>
         {{/if}}
 
         {{#if highlights.length}}
         <ul>
             {{#each highlights}}
-            <li>{{.}}</li>
+            <li>{{{markdownToHtml .}}}</li>
             {{/each}}
         </ul>
         {{/if}}

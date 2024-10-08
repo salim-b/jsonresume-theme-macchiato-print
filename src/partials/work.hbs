@@ -7,25 +7,25 @@
             {{> section-header name=this.name }}
 
             {{#if position}}
-            <h4>{{position}}</h4>
+            <h4>{{{markdownToHtml position}}}</h4>
             {{/if}}
 
             {{#if keywords.length}}
             <div class="flex-container">
                 {{#each keywords}}
-                    <h6 class="skill">{{.}}</h6>
+                    <h6 class="skill">{{{markdownToHtml .}}}</h6>
                 {{/each}}
             </div>
             {{/if}}
 
             {{#if summary}}
-            <p class="summary">{{summary}}</p>
+            <p class="summary">{{{markdownToHtml summary}}}</p>
             {{/if}}
 
             {{#if highlights.length}}
             <ul>
                 {{#each highlights}}
-                <li>{{.}}</li>
+                <li>{{{markdownToHtml .}}}</li>
                 {{/each}}
             </ul>
             {{/if}}
