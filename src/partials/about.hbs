@@ -13,11 +13,11 @@
     {{/if}}
 
     {{#if email}}
-        {{> info-tag text=this.email icon="fa-envelope-o" isEmail=true url=this.email}}
+        {{> info-tag text=this.email icon="fa-envelope-o" url=(concat "mailto:" this.email)}}
     {{/if}}
 
     {{#if phone}}
-        {{> info-tag text=this.phone icon="fa-mobile"}}
+        {{> info-tag text=this.phone icon="fa-mobile" url=(concat "tel:" this.phone)}}
     {{/if}}
 
     {{#if website}}
