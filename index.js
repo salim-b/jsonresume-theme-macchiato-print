@@ -12,6 +12,7 @@ handlebars.registerHelper({
   formatDate: date => moment(date).format('MM/YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
+  removeWhitespace: s => s.replace(/\s+/g, '')
 });
 
 function render(resume) {
