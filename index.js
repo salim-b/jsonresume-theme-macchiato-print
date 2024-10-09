@@ -3,7 +3,7 @@ const handlebars = require('handlebars');
 const handlebarsWax = require('handlebars-wax');
 const moment = require('moment');
 const MarkdownIt = require('markdown-it');
-const md = new MarkdownIt();
+const md = new MarkdownIt('commonmark');
 
 handlebars.registerHelper({
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
