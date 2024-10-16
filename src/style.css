@@ -246,6 +246,27 @@ li.skill {
   border-radius: 0;
 }
 
+.interests-container {
+  h4.bold {
+    font-size: 10px;
+  }
+
+  li {
+    margin-left: .15em;
+    padding-left: .15em;
+
+    span {
+      font-size: 10px;
+      background: var(--pill-bg-color);
+      border-radius: 5px;
+      padding-top: 1px;
+      padding-bottom: 2px;
+      padding-left: 4px;
+      padding-right: 4px;
+    };
+  };
+}
+
 .project-container {
   ul {
     list-style: none;
