@@ -2,6 +2,14 @@
 /*----- Colors -----*/
 /*----- Fonts -----*/
 /*----- Dimensions and sizes -----*/
+@page {
+  size: A4;
+  margin-top: 1.1cm;
+  margin-bottom: 1cm;
+  margin-left: 1cm;
+  margin-right: 1cm;
+}
+
 /* Base */
 @font-face {
   font-family: 'Red Hat Display';
@@ -220,10 +228,6 @@ ul.two-column li {
   padding-left: 0;
 }
 
-@page {
-  size: A4;
-}
-
 .container {
   padding-top: 20px;
 }
@@ -340,16 +344,20 @@ ul.two-column li {
   section {
     padding-top: 10px;
     break-inside: avoid;
+
+    p {
+      margin-bottom: 0px;
+    }
   }
 
   /* Avoid page breaks inside left-margin containers */
-  .left-column .container {
+  /* .left-column .container {
     break-inside: avoid;
-  }
+  } */
 
   /* Remove top margin if section follows the title */
   .title + section {
-      padding-top: 0px;
+    padding-top: 0px;
   }
 
   /* When rendering for print, apply all the margin to the top of the
