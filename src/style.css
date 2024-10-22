@@ -337,7 +337,7 @@ ul.two-column li {
       padding-top: 0px;
   }
 
-  /* When rendering for print, apply all the margin to the top of the 
+  /* When rendering for print, apply all the margin to the top of the
      section to give extra space on page breaks */
   .item {
     margin-bottom: 0px;
@@ -425,4 +425,19 @@ ul.two-column li {
   padding: .15em;
   background: ghostwhite;
   border-radius: 5px;
+}
+
+.custom-container  {
+  .item {
+    h3 {
+      font-size: 12px;
+      font-weight: lighter;
+    }
+  }
+}
+
+.item.custom {
+  p {
+    margin-top: 3px;
+  }
 }
