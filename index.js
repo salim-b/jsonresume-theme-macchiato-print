@@ -7,6 +7,7 @@ const md = new MarkdownIt('commonmark');
 
 handlebars.registerHelper({
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
+  concatArr: (arr, sep) => arr.filter(el => typeof el !== 'object').join(sep),
   eq: (a, b) => a === b,
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),

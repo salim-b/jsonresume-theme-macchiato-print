@@ -1,0 +1,17 @@
+{{#if resume.custom.length}}
+  <div class="container custom-container">
+    {{#each resume.custom}}
+      {{> title value=this.title}}
+      {{#if items.length}}
+        {{#each items}}
+          <section class="item custom">
+            {{> section-header name=this.name }}
+            {{#if keywords.length}}
+              <p class="keywords custom">{{{markdownToHtml (concatArr keywords ", ")}}}</p>
+            {{/if}}
+          </section>
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+{{/if}}
