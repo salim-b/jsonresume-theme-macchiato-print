@@ -348,6 +348,7 @@ ul.two-column li {
     break-after: avoid;
   }
 
+  /* Suppress external link icon */
   .fa-external-link {
     display: none;
   }
@@ -429,15 +430,23 @@ ul.two-column li {
 
 .custom-container  {
   .item {
+    margin-bottom: 11px;
+  
     h3 {
       font-size: 12px;
       font-weight: lighter;
     }
+    
+    p {
+      margin-top: 3px;
+    }
   }
-}
-
-.item.custom {
-  p {
-    margin-top: 3px;
+  
+  .title:not(:first-child) {
+    padding-top: 14px;
+    
+    @media print {
+      padding-top: 20px;
+    }
   }
 }
