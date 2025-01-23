@@ -6,8 +6,15 @@
         {{#each items}}
           <section class="item custom">
             {{> section-header name=this.name }}
+            {{#if keywords_inline.length}}
+              <p class="keywords-inline custom">{{{markdownToHtml (concatArr keywords_inline ", ")}}}</p>
+            {{/if}}
             {{#if keywords.length}}
-              <p class="keywords custom">{{{markdownToHtml (concatArr keywords ", ")}}}</p>
+              <ul class="keywords custom">
+                {{#each keywords}}
+                  <li>{{{markdownToHtml this}}}</li>
+                {{/each}}
+              </ul>
             {{/if}}
           </section>
         {{/each}}
