@@ -481,6 +481,7 @@ li.skill {
     margin-bottom: 0px;
   }
 
+/* Suppress external link icon */
   .fa-external-link {
     display: none;
   }
@@ -606,15 +607,23 @@ li.skill {
 
 .custom-container  {
   .item {
+    margin-bottom: 11px;
+
     h3 {
       font-size: 12px;
       font-weight: lighter;
     }
-  }
-}
 
-.item.custom {
-  p {
-    margin-top: 3px;
+    p {
+      margin-top: 3px;
+    }
+  }
+
+  .title:not(:first-child) {
+    padding-top: 14px;
+
+    @media print {
+      padding-top: 20px;
+    }
   }
 }
