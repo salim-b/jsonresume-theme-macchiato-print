@@ -91,6 +91,7 @@ body {
   margin: 50px 0 100px;
   letter-spacing: .3px;
   color: #39424B;
+  hyphens: auto;
 }
 
 h1,
@@ -414,6 +415,11 @@ ul.two-column li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.keywords-inline,
+.skills-container {
+  hyphens: none;
 }
 
 .main-skill {
