@@ -32,6 +32,7 @@ body {
   background: white;
   margin: 50px 0 100px;
   color: var(--body-color);
+  hyphens: auto;
 }
 
 h1,
@@ -425,6 +426,11 @@ li.skill {
       padding-left: 0;
     }
   }
+}
+
+.keywords-inline,
+.skills-container {
+  hyphens: none;
 }
 
 .skills-container .container {
