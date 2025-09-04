@@ -216,8 +216,8 @@ li.skill {
 }
 
 .profile-pic img {
-  height: 52px;
-  width: 52px;
+  height: 150px;
+  width: 100%;
   border-radius: 50%;
   border: 2px solid var(--accent-color);
 }
