@@ -4,7 +4,7 @@
 
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{> info-tag text=(concatArr address (concatArr (toArray (concat countryCode "-" postalCode) city region) " ") "<br>") icon="fa-map-marker"}}
         {{/location}}
     {{/if}}
 

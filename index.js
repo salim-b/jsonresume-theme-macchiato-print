@@ -7,9 +7,7 @@ handlebars.registerHelper({
   removeProtocol: url => url.replace(/.*?:\/\//g, ''),
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
   concatArr: (arr, sep) => arr.filter(el => typeof el !== 'object').filter(Boolean).join(sep),
-  // Arguments: {address, city, subdivision, postalCode, countryCode}
-  // formatAddress: (...args) => addressFormat(args).join(' '),
-  formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
+  toArray: (...args) => args.slice(0, -1),
   formatDate: date => moment(date).format('MM/YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
