@@ -6,7 +6,7 @@ const moment = require('moment');
 handlebars.registerHelper({
   removeProtocol: url => url.replace(/.*?:\/\//g, ''),
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
-  concatArr: (arr, sep) => arr.filter(el => typeof el !== 'object').join(sep),
+  concatArr: (arr, sep) => arr.filter(el => typeof el !== 'object').filter(Boolean).join(sep),
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
