@@ -253,8 +253,9 @@ ul.two-column li {
 }
 
 .profile-pic {
-  margin-top: -5px;
-  margin-right: 18px;
+  position: absolute;
+  margin-top: -24px;
+  right: 22px;
 }
 
 .profile-pic img {
@@ -280,6 +281,7 @@ ul.two-column li {
 
 /* Layouts */
 .page {
+  position: relative;
   background: white;
   width: 612px;
   min-height: 792px;
