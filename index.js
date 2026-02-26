@@ -11,7 +11,7 @@ handlebars.registerHelper({
   eq: (a, b) => a === b,
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
-  formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join('\n'),
+  formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join('<br>'),
   formatDate: date => {
     const parsedDate = moment(date, ['YYYY', 'YYYY-MM', 'YYYY-MM-DD'], true); // Parse the date using multiple formats
     if (parsedDate.isValid()) {
