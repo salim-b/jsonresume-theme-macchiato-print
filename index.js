@@ -8,7 +8,7 @@ handlebars.registerHelper({
   concat: (...args) => args.filter(arg => typeof arg !== 'object').join(''),
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
-  formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
+  formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join('\n'),
   formatDate: date => moment(date).format('MM/YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
