@@ -8,12 +8,8 @@
         {{/location}}
     {{/if}}
 
-    {{#if birthday}}
-        {{> info-tag text=(concat "Born in " this.birthday) icon="fa-calendar"}}
-    {{/if}}
-
     {{#if email}}
-        {{> info-tag text=this.email icon="fa-envelope-o" url=(concat "mailto:" this.email)}}
+        {{> info-tag text=this.email icon="fa-envelope" url=(concat "mailto:" this.email)}}
     {{/if}}
 
     {{#if phone}}
@@ -28,6 +24,22 @@
         {{#each profiles}}
             {{> social}}
         {{/each}}
+    {{/if}}
+
+    {{#if birth}}
+        {{#birth}}
+        {{#if date}}
+            {{> info-tag text=date icon="fa-birthday-cake"}}
+        {{/if}}
+        {{/birth}}
+    {{/if}}
+
+    {{#if citizenship}}
+        {{> info-tag text=this.citizenship icon="fa-flag"}}
+    {{/if}}
+
+    {{#if maritalStatus}}
+        {{> info-tag text=this.maritalStatus icon="fa-circle-o-notch"}}
     {{/if}}
 </div>
 {{/resume.basics}}
