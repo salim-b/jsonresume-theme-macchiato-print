@@ -137,12 +137,16 @@ em {
 
 ul {
   margin: 10px 0 0;
-  -webkit-padding-start: 25px;
+  padding-left: 10px;
 }
 
 ul li {
-  padding-left: 10px;
+  margin-bottom: 10px;
 }
+
+ul li::marker {
+  color: #999;
+};
 
 ul.minimal {
   list-style: none;
