@@ -4,10 +4,18 @@
 
     {{#each resume.work}}
         <section class="item">
-            {{> section-header name=this.name website=this.url }}
+            {{> section-header name=this.position website=this.url }}
 
+<<<<<<< HEAD
             {{#if position}}
             <h4>{{{markdownToHtml position}}}</h4>
+||||||| a816484
+            {{#if position}}
+            <h4>{{position}}</h4>
+=======
+            {{#if name}}
+            <h4>{{name}}</h4>
+>>>>>>> tweaks
             {{/if}}
 
             {{#if location}}

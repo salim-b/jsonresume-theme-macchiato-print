@@ -2,11 +2,15 @@
 <div class="container education-container">
     {{> title value="Ausbildung"}} {{#each resume.education}}
     <section class="item">
-        {{> section-header name=this.institution website=this.url }} {{#if location}}
-        <h5 class="location">{{{markdownToHtml location}}}</h5>
-        {{/if}}
+        {{> section-header name=this.area website=this.url }}
 
+<<<<<<< HEAD
         <h4>{{#if studyType}}{{{markdownToHtml studyType}}}, {{/if}}{{#if area}}{{{markdownToHtml area}}}{{/if}}</h4>
+||||||| a816484
+        <h4>{{#if studyType}}{{studyType}}, {{/if}}{{#if area}}{{area}}{{/if}}</h4>
+=======
+        <h4>{{#if studyType}}{{markdownToHtml studyType}}, {{/if}}{{#if institution}}{{markdownToHtml institution}}{{/if}}</h4>
+>>>>>>> tweaks
 
         {{#if score}}
         <h5>{{{markdownToHtml score}}}</h5>
