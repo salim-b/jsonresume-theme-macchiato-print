@@ -6,20 +6,12 @@
         <section class="item">
             {{> section-header name=this.position website=this.url }}
 
-<<<<<<< HEAD
-            {{#if position}}
-            <h4>{{{markdownToHtml position}}}</h4>
-||||||| a816484
-            {{#if position}}
-            <h4>{{position}}</h4>
-=======
             {{#if name}}
-            <h4>{{name}}</h4>
->>>>>>> tweaks
+            <h4>{{markdownToHtml name}}</h4>
             {{/if}}
 
             {{#if location}}
-            <h5 class="location">{{location}}</h5>
+            <h5 class="location">{{markdownToHtml location}}</h5>
             {{/if}}
 
             {{#if keywords.length}}
